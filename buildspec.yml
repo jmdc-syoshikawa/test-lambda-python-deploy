@@ -13,6 +13,10 @@ phases:
   build:
     commands:
       - echo Nothing to do in the build phase...
+  post_build:
+    commands:
+      - rm -rf README.md
+      - rm -rf requirements
 artifacts:
   files:
     - "**/*"
