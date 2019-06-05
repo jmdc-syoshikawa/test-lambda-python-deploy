@@ -6,7 +6,7 @@ phases:
     runtime-versions:
       python: 3.7
     commands:
-      - pip install -t . -r requirements
+      - pip install -t ./src -r requirements
   pre_build:
     commands:
       - echo Nothing to do in the pre_build phase...
@@ -15,8 +15,8 @@ phases:
       - echo Nothing to do in the build phase...
   post_build:
     commands:
-      - rm -rf README.md
-      - rm -rf requirements
+      - echo Nothing to do in the post_build phase...
 artifacts:
   files:
     - "**/*"
+  base-directory: src
