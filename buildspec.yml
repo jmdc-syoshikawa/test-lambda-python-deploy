@@ -6,6 +6,7 @@ phases:
     runtime-versions:
       python: 3.7
     commands:
+      - printenv
       - pip install -t ./src -r requirements
   pre_build:
     commands:
@@ -15,9 +16,9 @@ phases:
       - echo Nothing to do in the build phase...
   post_build:
     commands:
-      - echo Nothing to do ${AWS_DEFAULT_REGION}-${CODEBUILD_SOURCE_VERSION}.
+      - echo Nothing to do $AWS_DEFAULT_REGION-$CODEBUILD_SOURCE_VERSION.
 artifacts:
   files:
     - "**/*"
   base-directory: src
-  name: build-test-${AWS_DEFAULT_REGION}-${CODEBUILD_SOURCE_VERSION}-${CODEBUILD_START_TIME}
+  name: build-test-$(date +%Y-%m-%d)
