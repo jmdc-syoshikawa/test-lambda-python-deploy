@@ -20,4 +20,4 @@ artifacts:
   files:
     - "**/*"
   base-directory: src
-  name: build-test
+  name: build
