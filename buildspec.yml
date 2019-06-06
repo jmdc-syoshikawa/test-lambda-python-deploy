@@ -20,4 +20,4 @@ artifacts:
   files:
     - "**/*"
   base-directory: src
-  name: build-test-${AWS_DEFAULT_REGION}-${CODEBUILD_SOURCE_VERSION}
+  name: build-test-${AWS_DEFAULT_REGION}-${CODEBUILD_SOURCE_VERSION}-${CODEBUILD_START_TIME}
