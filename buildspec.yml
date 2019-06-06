@@ -16,7 +16,7 @@ phases:
       - echo Nothing to do in the build phase...
   post_build:
     commands:
-      - echo Nothing to do $AWS_REGION-$CODEBUILD_SOURCE_VERSION.
+      - echo Nothing to do $AWS_REGION - $CODEBUILD_SOURCE_VERSION .
 artifacts:
   files:
     - "**/*"
