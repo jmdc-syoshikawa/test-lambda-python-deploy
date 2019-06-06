@@ -21,4 +21,4 @@ artifacts:
   files:
     - "**/*"
   base-directory: src
-  name: build-test-$(date +%Y-%m-%d)
+  name: build-test
