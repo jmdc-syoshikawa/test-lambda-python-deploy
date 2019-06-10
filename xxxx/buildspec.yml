@@ -1,0 +1,22 @@
+# Python template
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.7
+    commands:
+      - pip install -t ./src -r requirements
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre_build phase...
+  build:
+    commands:
+      - echo Nothing to do in the build phase...
+  post_build:
+    commands:
+      - echo Do deploy to lambda...
+artifacts:
+  files:
+    - "**/*"
+  base-directory: src
